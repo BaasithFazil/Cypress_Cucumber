@@ -1,0 +1,18 @@
+{
+
+    "LoginPageLocators": {
+
+        "username_text": ":nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input",
+        "password_text": ":nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input"
+        
+    } ,
+
+    "buttonLocators": {
+        "login" : ".oxd-button",
+        "logout": ":nth-child(4) > .oxd-userdropdown-link"
+    },
+
+    "dropdownLocators": {
+        "menuDropdown" : ".oxd-userdropdown-tab"
+    }
+}
