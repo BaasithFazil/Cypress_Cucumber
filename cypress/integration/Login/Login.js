@@ -1,32 +1,37 @@
 /// <reference types="Cypress" />
 
-import { loginPageElements } from "../../../PageObjects/PageActions/loginPageActions";
+import { Elements } from "../../../PageObjects/PageActions/pageActions";
 import {Given,When,Then} from "cypress-cucumber-preprocessor/steps"
 
-const Login_Elements = new loginPageElements
+const myElements = new Elements;
 
     Given('Visit Orange HRM website', function(){
         cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
     })
 
     When('user provide the user name as {string}', function(uname){
-        Login_Elements.username(uname)
+        myElements.username(uname)
     })
 
     When('user provide password', function(){
-        Login_Elements.password('admin123')
+        myElements.password('admin123')
     })
 
     Then('Click on the login button into the orange HRM website', function(){
-        Login_Elements.login()
+        myElements.login()
     })
 
     When('Clicking the menu dropdown option', function() {
-        Login_Elements.clickoption()
+        myElements.clickoption()
     })
 
     Then('User Need to logout', function() {
-        Login_Elements.logout()
+        myElements.logout()
+    })
+
+
+    Then('The header element {string} should be visible', function(){
+        myElements.text()
     })
 
     
