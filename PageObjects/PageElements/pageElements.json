@@ -14,6 +14,10 @@
 
     "dropdownLocators": {
         "menuDropdown" : ".oxd-userdropdown-tab"
+    },
+
+    "headings": {
+        "mainheader": ".oxd-topbar-header-breadcrumb > .oxd-text"
     }
 
 
