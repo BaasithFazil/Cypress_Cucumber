@@ -6,11 +6,11 @@ const pageElements = require('../PageElements/pageElements.json');
 export class Elements{
 
     username(usernamee) {
-        cy.get(pageElements.LoginPageLocators.username_text).type(usernamee);
+        cy.get(pageElements.LoginPageLocators.username).type(usernamee);
         return
     }
     password(passwordd) {
-        cy.get(pageElements.LoginPageLocators.password_text).type(passwordd);
+        cy.get(pageElements.LoginPageLocators.password).type(passwordd);
         return
     }
     login() {
@@ -18,7 +18,8 @@ export class Elements{
         return
     }
     logout() {
-        cy.get(pageElements.buttonLocators.logout).click();
+        cy.get(pageElements.dropdownLocators.menuDropdown).click()
+        cy.get(pageElements.buttonLocators.logout).click()
     }
 
     clickoption() {
@@ -26,8 +27,27 @@ export class Elements{
     }
 
     text(myText) {
-        cy.get(pageElements.headings.mainheader).should('be.visible', myText);
+
+        if(myText === "DashboardHeader") {
+            cy.get(pageElements.text.mainHeader).should('be.visible', myText);
+        } else if (myText === "profileName") {
+            cy.get(pageElements.text.userName).should('be.visible', myText);
+        } else {
+            throw new Error(`Unsupported elementName: ${elementName}`);
+        }
     }
 
+
+    search(myInput) {
+        cy.get(pageElements.search.mainSearch).click().type(myInput);
+    }
+    
+    valuesGenerate(myInput) {
+        cy.get(pageElements.values.searchMenu).should('have.length', myInput);
+    }
+
+    clear(myInput) {
+        cy.get(pageElements.search.mainSearch).clear(myInput);
+    }
 }
 

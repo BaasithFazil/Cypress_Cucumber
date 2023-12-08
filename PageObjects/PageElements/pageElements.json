@@ -2,8 +2,8 @@
 
     "LoginPageLocators": {
 
-        "username_text": ":nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input",
-        "password_text": ":nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input"
+        "username": ":nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input",
+        "password": ":nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input"
         
     } ,
 
@@ -16,9 +16,16 @@
         "menuDropdown" : ".oxd-userdropdown-tab"
     },
 
-    "headings": {
-        "mainheader": ".oxd-topbar-header-breadcrumb > .oxd-text"
+    "text": {
+        "mainHeader": ".oxd-topbar-header-breadcrumb > .oxd-text",
+        "userName": ".oxd-userdropdown-name"
+    },
+
+    "search": {
+        "mainSearch": ".oxd-input"  
+    },
+
+    "values": {
+        "searchMenu": "ul.oxd-main-menu"
     }
-
-
 }
