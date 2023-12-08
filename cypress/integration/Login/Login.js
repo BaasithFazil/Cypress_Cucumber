@@ -17,7 +17,7 @@ const myElements = new Elements;
         myElements.password('admin123')
     })
 
-    Then('Click on the login button into the orange HRM website', function(){
+    Then('Click on the login button to log in', function(){
         myElements.login()
     })
 
@@ -29,9 +29,20 @@ const myElements = new Elements;
         myElements.logout()
     })
 
+    Then('The specified element {string} should be visible', function(myText){
+        myElements.text(myText) 
+    })
 
-    Then('The header element {string} should be visible', function(){
-        myElements.text()
+    When('Searching the {string} menu item in the search option', function(myvalue){
+        myElements.search(myvalue);
+    })
+
+    Then('The filter option should be equals to {string}', function(myValue){
+        myElements.valuesGenerate(myValue)
+    })
+
+    Then('Clear the text {string}', function(myInput){
+        myElements.clear(myInput);
     })
 
     
