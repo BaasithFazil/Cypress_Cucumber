@@ -1,22 +1,19 @@
-Feature: Orange HRM Testing
-
+   Feature: Orange HRM Testing (Dashboard)
+   
+   
    Background: Login into the system
 
    Given Visit Orange HRM website
    When user provide the user name as "Admin"
    When user provide password
    Then Click on the login button to log in
- 
-   
-   Scenario: 01  Testing the dashboard
-   Then The specified element "DashboardHeader" should be visible
 
-   Scenario: 02  Testing the dashboard
+  
+   Scenario: 01  Testing the dashboard texts
    Then The specified element "DashboardHeader" should be visible
    Then The specified element "profileName" should be visible
 
-   @OnlyScenario
-   Scenario: 03 Validating the search menu
+   Scenario: 02 Validating the search menu options
    When Searching the "Admin" menu item in the search option
    Then The filter option should be equals to "1"
    Then Clear the text "Admin"
@@ -71,11 +68,3 @@ Feature: Orange HRM Testing
    Then Clear the text "Buzz"
 
    Then User Need to logout
-
-
-
-
-
-
-
-

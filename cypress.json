@@ -1,3 +1,7 @@
 {
-    "testFiles": "**/*.{feature,features}"
+    "testFiles": "**/*.{feature,features}",
+    "env": {
+        "TAGS": "not @ignore"
+    },
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/"
 }
