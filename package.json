@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cypress:run": "cypress run --spec cypress/integration/**/*.feature --env TAGS=@OnlyScenario"
+    "cypress:run": "cypress run --spec cypress/integration/features/**/*.features --env TAGS=@OnlyScenario"
   },
   "author": "",
   "license": "ISC",

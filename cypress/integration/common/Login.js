@@ -6,7 +6,7 @@ import {Given,When,Then} from "cypress-cucumber-preprocessor/steps"
 const myElements = new Elements;
 
     Given('Visit Orange HRM website', function(){
-        cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+        cy.visit('/web/index.php/auth/login');
     })
 
     When('user provide the user name as {string}', function(uname){
