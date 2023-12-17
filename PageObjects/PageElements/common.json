@@ -1,0 +1,26 @@
+{
+    "dropdown": {
+        "menu" : ".oxd-userdropdown-tab",
+        "userManagement": ".--visited > .oxd-topbar-body-nav-tab-item",
+        "Job": ":nth-child(2) > .oxd-topbar-body-nav-tab-item",
+        "dropdownOpt": {
+            "userManagement": {
+                "users": ".oxd-dropdown-menu > li"
+            },
+            "Job": {
+                "jobTitle": ".oxd-dropdown-menu > :nth-child(1)",
+                "payGrades": ".oxd-dropdown-menu > :nth-child(2)"
+            }
+        }
+    },
+
+    "selection": {
+        "Admin" : ":nth-child(1) > .oxd-main-menu-item > .oxd-text"
+    },
+
+    "filterItem": {
+        "child" : ".oxd-main-menu-item"
+
+    }
+    
+}

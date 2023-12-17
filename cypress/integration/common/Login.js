@@ -1,48 +1,28 @@
 /// <reference types="Cypress" />
 
-import { Elements } from "../../../PageObjects/PageActions/pageActions";
-import {Given,When,Then} from "cypress-cucumber-preprocessor/steps"
+import { Login } from "../../../PageObjects/PageActions/loginstepdef";
+import {Given,When,Then,And} from "cypress-cucumber-preprocessor/steps";
 
-const myElements = new Elements;
+const login = new Login;
 
-    Given('Visit Orange HRM website', function(){
-        cy.visit('/web/index.php/auth/login');
+    Given('the user is on the {string} page', (url)=> {
+
+        if(url === "Login") {
+            cy.visit("/web/index.php/auth/login");
+        } else if (url === "Home") {
+            cy.visit("/")
+        } else {
+            throw new Error('Invalid URL name specified', {$url})
+        }
     })
 
-    When('user provide the user name as {string}', function(uname){
-        myElements.username(uname)
+    Then('User log into the system with {string} username and {string} password', (username, password)=> {
+        login.username(username);
+        login.password(password);
+        login.login();
     })
 
-    When('user provide password', function(){
-        myElements.password('admin123')
+    And('User log out', function(){
+        login.logout();
     })
 
-    Then('Click on the login button to log in', function(){
-        myElements.login()
-    })
-
-    When('Clicking the menu dropdown option', function() {
-        myElements.clickoption()
-    })
-
-    Then('User Need to logout', function() {
-        myElements.logout()
-    })
-
-    Then('The specified element {string} should be visible', function(myText){
-        myElements.text(myText) 
-    })
-
-    When('Searching the {string} menu item in the search option', function(myvalue){
-        myElements.search(myvalue);
-    })
-
-    Then('The filter option should be equals to {string}', function(myValue){
-        myElements.valuesGenerate(myValue)
-    })
-
-    Then('Clear the text {string}', function(myInput){
-        myElements.clear(myInput);
-    })
-
-    
