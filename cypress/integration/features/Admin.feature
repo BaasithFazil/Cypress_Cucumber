@@ -7,8 +7,8 @@
    Scenario: 01 Navigate to admin panel and selecting dropdown checking
 
     When Search the "Admin" menu item in the search option
-    And Click the "Job" dropdown option
-    Then Click the dropdown option "JobTitle" as
 
+    And Click the "Job" dropdown option
+    Then Click the dropdown option "Job Title" as
 
 
