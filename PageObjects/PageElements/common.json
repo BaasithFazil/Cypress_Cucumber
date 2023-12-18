@@ -8,8 +8,71 @@
                 "users": ".oxd-dropdown-menu > li"
             },
             "Job": {
-                "jobTitle": ".oxd-dropdown-menu > :nth-child(1)",
-                "payGrades": ".oxd-dropdown-menu > :nth-child(2)"
+                "jobTitle": ".oxd-dropdown-menu > :nth-child(1)",  
+                "payGrades": ".oxd-dropdown-menu > :nth-child(2)",
+                "employmentStatus": ".oxd-dropdown-menu > :nth-child(3)",
+                "jobCategory": ".oxd-dropdown-menu > :nth-child(4)",
+                "workShifts": ".oxd-dropdown-menu > :nth-child(5)"
+            },
+            "organization": {
+                "generalInformation": ".oxd-dropdown-menu > :nth-child(1)",
+                "locations":".oxd-dropdown-menu > :nth-child(2)",
+                "Structure":".oxd-dropdown-menu > :nth-child(3)"
+            },
+            "qualification": {
+                "skills": ".oxd-dropdown-menu > :nth-child(1)",
+                "education": ".oxd-dropdown-menu > :nth-child(2)",
+                "licenses": ".oxd-dropdown-menu > :nth-child(3)",
+                "languages": ".oxd-dropdown-menu > :nth-child(4)",
+                "memberships": ".oxd-dropdown-menu > :nth-child(5)"
+            },
+            "nationalities": ".oxd-dropdown-menu > :nth-child(1) > li",
+            "corporateBranding": ".oxd-dropdown-menu > :nth-child(2) > li",
+            "configurations": {
+                "emailConfiguration": ".oxd-dropdown-menu > :nth-child(1)",
+                "emailSubscription": ".oxd-dropdown-menu > :nth-child(2)",
+                "localization": ".oxd-dropdown-menu > :nth-child(3)",
+                "languagePackages": ".oxd-dropdown-menu > :nth-child(4)",
+                "modules": ".oxd-dropdown-menu > :nth-child(5)",
+                "socialMediaAuthentication": ".oxd-dropdown-menu > :nth-child(6)",
+                "registerAuthClient": ".oxd-dropdown-menu > :nth-child(7)",
+                "ldpaConfiguration": ".oxd-dropdown-menu > :nth-child(8)"
+            }
+        },
+        "dropdownlocation": {
+            "userManagement": {
+                "users": "web/index.php/admin/viewSystemUsers"
+            },
+            "Job": {
+                "jobTitle": "web/index.php/admin/viewJobTitleList",
+                "payGrades": "web/index.php/admin/viewPayGrades",
+                "employmentStatus": "web/index.php/admin/employmentStatus",
+                "jobCategory": "web/index.php/admin/jobCategory",
+                "workShifts": "web/index.php/admin/workShift"
+            },
+            "organization": {
+                "generalInformation":"web/index.php/admin/viewOrganizationGeneralInformation" ,
+                "locations":"web/index.php/admin/viewLocations",
+                "Structure": "web/index.php/admin/viewCompanyStructure"
+            },
+            "qualification": {
+                "skills": "web/index.php/admin/viewSkills" ,
+                "education":"web/index.php/admin/viewEducation",
+                "licenses":"web/index.php/admin/viewLicenses",
+                "languages": "web/index.php/admin/viewLanguages",
+                "memberships": "web/index.php/admin/membership"
+            },
+            "nationalities": "web/index.php/admin/nationality",
+            "corporateBranding": "web/index.php/admin/addTheme",
+            "configurations": {
+                "emailConfiguration": "web/index.php/admin/listMailConfiguration",
+                "emailSubscription": "web/index.php/admin/viewEmailNotification",
+                "localization": "web/index.php/admin/localization",
+                "languagePackages": "web/index.php/admin/languagePackage",
+                "modules": "web/index.php/admin/viewModules",
+                "socialMediaAuthentication": "web/index.php/admin/openIdProvider",
+                "registerAuthClient": "web/index.php/admin/registerOAuthClient",
+                "ldpaConfiguration": "web/index.php/admin/ldapConfiguration"
             }
         }
     },

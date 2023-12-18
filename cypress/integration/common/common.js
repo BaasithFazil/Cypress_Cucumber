@@ -7,6 +7,7 @@ import {Given,When,Then,And} from "cypress-cucumber-preprocessor/steps";
 const common = new Common;
 
 
+
 Then('The specified element {string} should be visible', function(myText){
     common.text(myText);
 })
@@ -28,7 +29,7 @@ And('Click the {string} dropdown option', function(myInput) {
 })
 
 
-Then('Click the dropdown option {string} as', (input)=> {
+Then('Click the dropdown option {string} as', function(input) {
     common.clickdropdown(input);
 })
 
